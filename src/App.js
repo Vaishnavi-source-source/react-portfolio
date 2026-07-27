@@ -51,8 +51,10 @@ const certificates = [
   if (skillsRef.current) {
     observer.observe(skillsRef.current);
   }
-
+useEffect(() => {
+  const currentRef = skillsRef.current;
   return () => {
+    
     if (skillsRef.current) {
       observer.unobserve(skillsRef.current);
     }
@@ -176,8 +178,8 @@ const certificates = [
       <h3>Ecommerce Platform</h3>
       <p>E‑Commerce Platform developed using HTML, CSS, JavaScript frontend and Spring Boot Java backend, featuring product catalog, user authentication, cart/checkout flow, and admin CRUD operations.</p>
       <div className="project-links">
-        <a href="https://github.com/yourusername/project1" target="_blank">GitHub</a>
-        <a href="https://yourliveprojectlink.com" target="_blank">Live Demo</a>
+        <a href="https://github.com/yourusername/project1" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://yourliveprojectlink.com" target="_blank" rel="noopener noreferrer">Live Demo</a>
       </div>
     </div>
 
@@ -187,8 +189,8 @@ const certificates = [
       <h3>Smart Toll Plaza: Fastag Detection and Lane Optimization</h3>
       <p>IOT Project : Working with Arduino, RFID, IR sensors, LCD, DFPlayer Mini, and C/C++, along with FASTag detection, successful balance checking, lane monitoring, and audio feedback.</p>
       <div className="project-links">
-        <a href="https://github.com/yourusername/project2" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/posts/vaishnavirokade04_arduino-iot-automation-ugcPost-7470823868618919936-TyHl/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEUT1QMBW4HYd3lftE_xGZLwF3H62CGnfoM" target="_blank">Live Demo</a>
+        <a href="https://github.com/yourusername/project2" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/posts/vaishnavirokade04_arduino-iot-automation-ugcPost-7470823868618919936-TyHl/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEUT1QMBW4HYd3lftE_xGZLwF3H62CGnfoM" target="_blank" rel="noopener noreferrer">Live Demo</a>
       </div>
     </div>
 
