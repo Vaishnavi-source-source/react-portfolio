@@ -1,0 +1,28 @@
+.circle-container {
+  position: relative;
+  text-align: center;
+  margin: 20px;
+  width: 120px;
+  height: 150px; 
+}
+
+.circle-svg {
+  display: block;
+  margin: auto;
+}
+
+.circle-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px; 
+  height: 40px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.circle-text {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #d3f2f0;
+}
