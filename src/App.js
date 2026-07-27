@@ -28,6 +28,7 @@ function App() {
    const [animateSkills, setAnimateSkills] = useState(false);
    const skillsRef = useRef(null);
    const [selectedCert, setSelectedCert] = useState(null);
+   
 const certificates = [
   { image: certificate1, issuer: "MasterMind Tech" },
   { image: certificate2, issuer: "Giri's TechHub" },
@@ -51,8 +52,7 @@ const certificates = [
   if (skillsRef.current) {
     observer.observe(skillsRef.current);
   }
-useEffect(() => {
-  const currentRef = skillsRef.current;
+
   return () => {
     
     if (skillsRef.current) {
