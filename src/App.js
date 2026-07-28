@@ -37,26 +37,27 @@ const certificates = [
   { image: certificate5, issuer: "IIRS" }
 ];
 
-   useEffect(() => {
+  useEffect(() => {
   const observer = new IntersectionObserver(
     (entries) => {
       if (entries[0].isIntersecting) {
-        setAnimateSkills(true);   // start animation when visible
+        setAnimateSkills(true);
       } else {
-        setAnimateSkills(false);  // reset when not visible
+        setAnimateSkills(false);
       }
     },
     { threshold: 0.3 }
   );
 
-  if (skillsRef.current) {
-    observer.observe(skillsRef.current);
+  const currentRef = skillsRef.current; // copy ref value once
+
+  if (currentRef) {
+    observer.observe(currentRef);
   }
 
   return () => {
-    
-    if (skillsRef.current) {
-      observer.unobserve(skillsRef.current);
+    if (currentRef) {
+      observer.unobserve(currentRef);
     }
   };
 }, []);
